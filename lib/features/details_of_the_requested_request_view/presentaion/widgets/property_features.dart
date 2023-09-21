@@ -31,11 +31,11 @@ class _PropertyFeaturesState extends State<PropertyFeatures> {
           image: Image.asset(AssetsData.propertyFeaturesImage),
         ),
       GridView(  shrinkWrap: true,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisSpacing: 2,
           mainAxisSpacing: 2,
           crossAxisCount: 2,
-          childAspectRatio: 6,
+          childAspectRatio: 8,
 
         ),
       children: [

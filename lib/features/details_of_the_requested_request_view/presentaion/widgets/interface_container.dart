@@ -27,11 +27,11 @@ class _InterfaceContainerState extends State<InterfaceContainer> {
       ),
     GridView(
      shrinkWrap: true,
-    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisSpacing: 2,
      mainAxisSpacing: 2,
     crossAxisCount: 2,
-      childAspectRatio: 6,
+      childAspectRatio: 8,
 
     ),
     children: <Widget>[
@@ -99,6 +99,7 @@ class _InterfaceContainerState extends State<InterfaceContainer> {
               Styles.textStyle14.copyWith(color: kPrimaryColorBlack),
             )),
       ),
+      Container(),
       CheckboxListTile(
         activeColor: kPrimaryColorPurple,
         value: checkboxValue5,
@@ -116,7 +117,7 @@ class _InterfaceContainerState extends State<InterfaceContainer> {
             )),
 
       ),
-      Container(),
+
 
     ],
     ),
