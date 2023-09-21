@@ -45,7 +45,7 @@ class _BathroomContainerState extends State<BathroomContainer> {
                         child: AnimatedContainer(
                           duration: const Duration(milliseconds: 300),
                           margin: const EdgeInsets.symmetric(horizontal: 7),
-                          width: 30,
+                          width: 40,
                           height: 35,
                           decoration: BoxDecoration(
                             boxShadow: [

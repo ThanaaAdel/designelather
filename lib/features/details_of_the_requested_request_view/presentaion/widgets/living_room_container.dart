@@ -1,3 +1,4 @@
+import 'package:designelather/core/utils/gaps.dart';
 import 'package:designelather/features/details_of_the_requested_request_view/presentaion/widgets/text_and_icon.dart';
 import 'package:flutter/material.dart';
 import '../../../../constant.dart';
@@ -12,7 +13,7 @@ class LivingRoomContainer extends StatefulWidget {
 }
 
 class _LivingRoomContainerState extends State<LivingRoomContainer> {
-  List<String> taps = const ['+7', '7', '6', '5', '4', '3', '2', '1'];
+  List<String> taps = const ['4', '+7', '3', '7', '2', '6', '1', '5','استديو'];
 
   int current = 0;
   @override
@@ -23,14 +24,24 @@ class _LivingRoomContainerState extends State<LivingRoomContainer> {
           text: 'غرف النوم',
           image: Image.asset(AssetsData.livingRoomImage),
         ),
+        Gaps.vGap10,
         Padding(
           padding: const EdgeInsets.only(right: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.06,
-                child: ListView.builder(
+                height: MediaQuery.of(context).size.height * 0.11,
+                child: GridView.builder(
+
+
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisSpacing: 5,
+                    mainAxisSpacing: 2,
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.7,
+
+                  ),
                   padding: EdgeInsets.zero,
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: taps.length,
@@ -48,9 +59,10 @@ class _LivingRoomContainerState extends State<LivingRoomContainer> {
                           child: AnimatedContainer(
                             duration: const Duration(milliseconds: 300),
                             margin: const EdgeInsets.symmetric(horizontal: 7),
-                            width: 30,
-                            height: 35,
+                            width: 100,
+                            height: 40,
                             decoration: BoxDecoration(
+
                               boxShadow: [
                                 BoxShadow(
                                     color: Colors.grey.withOpacity(0.5),
@@ -74,17 +86,7 @@ class _LivingRoomContainerState extends State<LivingRoomContainer> {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        // Visibility(
-                        //     visible: current == index,
-                        //     child: Container(
-                        //       width: 5,
-                        //       height: 5,
-                        //       decoration: const BoxDecoration(
-                        //           color: kPrimaryColorPurple, shape: BoxShape.circle),
-                        //     ))
+
                       ],
                     );
                   },

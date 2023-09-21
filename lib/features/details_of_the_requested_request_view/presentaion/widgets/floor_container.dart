@@ -49,8 +49,8 @@ class _FloorContainerState extends State<FloorContainer> {
                           child: AnimatedContainer(
                             duration: const Duration(milliseconds: 300),
                             margin: const EdgeInsets.symmetric(horizontal: 7),
-                            width: 35,
-                            height: 35,
+                            width: 40,
+                            height: 40,
                             decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
